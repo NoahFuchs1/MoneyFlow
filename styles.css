@@ -1,0 +1,192 @@
+/* Grundlegende Stile */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 60px;
+    /* Platz für die Navigation */
+}
+
+.page {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.page.active {
+    display: flex;
+}
+
+h1,
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.action-btn,
+.save-btn,
+.back-btn,
+.nav-btn,
+.view-btn {
+    width: 150px;
+    padding: 15px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn#expense-btn {
+    background-color: #e74c3c;
+}
+
+.action-btn#income-btn {
+    background-color: #27ae60;
+}
+
+.save-btn {
+    background-color: #3498db;
+}
+
+.back-btn,
+.nav-btn {
+    background-color: #95a5a6;
+}
+
+.view-btn {
+    background-color: #3498db;
+}
+
+.action-btn:hover,
+.save-btn:hover,
+.back-btn:hover,
+.nav-btn:hover,
+.view-btn:hover {
+    opacity: 0.8;
+}
+
+/* Eingabefelder */
+input[type="number"],
+input[type="text"] {
+    width: 90%;
+    max-width: 300px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Bottom Navigation */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Übersicht Liste */
+#entries-list,
+#detail-entries-list {
+    width: 90%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.entry-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #3498db;
+    transition: background-color 0.3s ease;
+}
+
+.entry-box.green {
+    background-color: #27ae60;
+}
+
+.entry-box.red {
+    background-color: #e74c3c;
+}
+
+.entry-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.entry-actions button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.entry-actions button:hover {
+    text-decoration: underline;
+}
+
+/* Detail Ansicht */
+#detail-title {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+
+    .action-btn,
+    .save-btn,
+    .back-btn,
+    .nav-btn,
+    .view-btn {
+        width: 120px;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    input[type="number"],
+    input[type="text"] {
+        width: 100%;
+    }
+
+    .entry-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .entry-actions {
+        margin-top: 10px;
+    }
+}

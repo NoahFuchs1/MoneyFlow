@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Startseite -->
+    <div id="home" class="page active">
+        <h1>Budget App</h1>
+        <div class="button-container">
+            <button class="action-btn" id="expense-btn">- Ausgaben</button>
+            <button class="action-btn" id="income-btn">+ Einnahmen</button>
+        </div>
+        <nav class="bottom-nav">
+            <button class="nav-btn" id="overview-btn">Übersicht</button>
+        </nav>
+    </div>
+
+    <!-- Neue Einnahme/Ausgabe Seite -->
+    <div id="new-entry" class="page">
+        <h2 id="entry-type">Neue Ausgabe</h2>
+        <input type="number" id="amount" placeholder="Betrag eingeben" required>
+        <input type="text" id="reason" placeholder="Grund eingeben" required>
+        <div class="button-container">
+            <button class="save-btn" id="save-btn">Fertig</button>
+            <button class="back-btn" id="back-btn">Zurück</button>
+        </div>
+    </div>
+
+    <!-- Übersicht Seite -->
+    <div id="overview" class="page">
+        <h2>Übersicht</h2>
+        <div class="view-buttons">
+            <button class="view-btn" id="day-view-btn">Tagesansicht</button>
+            <button class="view-btn" id="week-view-btn">Wochenansicht</button>
+            <button class="view-btn" id="month-view-btn">Monatsansicht</button>
+        </div>
+        <div id="entries-list">
+            <!-- Dynamisch generierte Einträge kommen hier -->
+        </div>
+        <nav class="bottom-nav">
+            <button class="nav-btn" id="overview-back-btn">Zurück</button>
+        </nav>
+    </div>
+
+    <!-- Detailansicht für spezifische Tage/Wochen/Monate -->
+    <div id="detail-view" class="page">
+        <h2 id="detail-title">Detailansicht</h2>
+        <div id="detail-entries-list">
+            <!-- Dynamisch generierte Detail-Einträge kommen hier -->
+        </div>
+        <button class="back-btn" id="detail-back-btn">Zurück</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
